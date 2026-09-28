@@ -477,7 +477,18 @@
         };
 
         const simulateSend = async () => {
-            return new Promise((resolve) => setTimeout(resolve, simulatedDelay));
+            const formData = new FormData(form);
+            const response = await fetch('https://formspree.io/f/xyezbqrk', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Échec de l\'envoi');
+            }
         };
 
         const handleSubmit = async (e) => {
