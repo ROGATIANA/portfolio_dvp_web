@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de ROGATIANA - Développeur web front-end junior (HTML, CSS, JavaScript). Découvrez mes projets, compétences et contact.">
+    <meta name="author" content="ROGATIANA">
+    <meta name="theme-color" content="#3b4bf0">
+    <title>ROGATIANA · Développeur front-end junior</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="particles-bg" aria-hidden="true">
+        <span class="particle-bg"></span>
+        <span class="particle-bg"></span>
+        <span class="particle-bg"></span>
+        <span class="particle-bg"></span>
+        <span class="particle-bg"></span>
+        <span class="particle-bg"></span>
+        <span class="particle-bg"></span>
+        <span class="particle-bg"></span>
+        <span class="particle-bg"></span>
+    </div>
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="logo-bracket">&lt;</span>rogatiana<span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#accueil" class="logo" aria-label="Retour à l'accueil">
+                <span class="logo-bracket">&lt;</span>rogatiana<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+                <a href="#accueil" class="nav-link active">Accueil</a>
+                <a href="#apropos" class="nav-link">À propos</a>
+                <a href="#competences" class="nav-link">Compétences</a>
+                <a href="#projets" class="nav-link">Projets</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème clair/sombre">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-bg-blobs" aria-hidden="true">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+            </div>
+
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        <span class="pulse-dot"></span>Ouvert aux collaborations
+                    </span>
+                    <h1 class="hero-title">
+                        Je crée des interfaces web
+                        <span class="hero-highlight">modernes</span>
+                        &amp; performantes
+                    </h1>
+                    <p class="hero-description">
+                        Développeur front-end junior passionné par <strong>HTML</strong>,
+                        <strong>CSS</strong> et <strong>JavaScript</strong>.
+                        J'aime transformer des maquettes en expériences utilisateur fluides et accessibles.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projets" class="btn btn-primary">
+                            <i class="fas fa-code"></i> Voir mes projets
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-paper-plane"></i> Me contacter
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/rogatiana" target="_blank" rel="noopener" aria-label="GitHub"
+                            class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/rogatiana" target="_blank" rel="noopener" aria-label="LinkedIn"
+                            class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/Rogatiana05" target="_blank" rel="noopener" aria-label="X (Twitter)"
+                            class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-card">
+                        <div class="code-header">
+                            <div class="dot-group">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="code-filename">portfolio.js</span>
+                        </div>
+                        <pre class="code-body"><code><span class="c-keyword">const</span> <span class="c-var">dev</span> = {
+  <span class="c-prop">nom</span>: <span class="c-str">"ROGATIANA"</span>,
+  <span class="c-prop">role</span>: <span class="c-str">"Front-end junior"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>, <span class="c-str">"JS"</span>],
+  <span class="c-prop">dispo</span>: <span class="c-bool">true</span>
+};<span class="cursor">|</span></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#apropos" class="scroll-down" aria-label="Défiler vers le bas">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <section id="apropos" class="section reveal">
+            <div class="container">
+                <h2 class="section-title">À propos</h2>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Bonjour ! Je m'appelle <strong>ROGATIANA</strong>, développeur web front-end junior
+                            basé à <strong>Fianarantsoa, Madagascar</strong>. Étudiant en L1 DA2I à l'EMIT Fianarantsoa,
+                            j'ai acquis de solides compétences en <strong>HTML5, CSS3 et JavaScript</strong>.
+                        </p>
+                        <p>
+                            Je suis curieux, rigoureux et j'accorde une attention particulière à la qualité du code,
+                            à l'accessibilité et au responsive design. Mon objectif : intégrer une équipe
+                            dynamique pour continuer à apprendre et contribuer à des projets ambitieux.
+                        </p>
+                        <p>
+                            En dehors du code, j'aime la photographie, les échecs et contribuer à des projets
+                            open-source.
+                        </p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-label">Projets réalisés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-label">Technologies clés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="100" data-suffix="%">0</div>
+                            <div class="stat-label">Motivation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences" class="section reveal">
+            <div class="container">
+                <h2 class="section-title">Compétences</h2>
+
+                <div class="skills-container">
+                    <div class="skill-tag"><i class="fab fa-html5"></i> HTML5 sémantique</div>
+                    <div class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3 / Flexbox / Grid</div>
+                    <div class="skill-tag"><i class="fab fa-js"></i> JavaScript (ES6+)</div>
+                    <div class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive design</div>
+                    <div class="skill-tag"><i class="fas fa-code-branch"></i> Git &amp; GitHub</div>
+                    <div class="skill-tag"><i class="fas fa-pencil-ruler"></i> Figma (intégration)</div>
+                    <div class="skill-tag"><i class="fas fa-universal-access"></i> Accessibilité (a11y)</div>
+                    <div class="skill-tag"><i class="fas fa-bolt"></i> Performance web</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets" class="section reveal">
+            <div class="container">
+                <h2 class="section-title">Mes projets</h2>
+                <p class="section-subtitle">
+                    Découvrez une sélection de mes réalisations récentes.
+                </p>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>ClashBACC</h3>
+                        <p>
+                            Site web de baccalauréat scientifique dédié à la présentation des informations académiques,
+                            des matières principales, des leçons et des exercices. Une interface claire et organisée
+                            pour faciliter la révision des candidats au baccalauréat scientifique.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <a href="https://rogatiana.github.io/clashBACC" target="_blank" rel="noopener noreferrer"
+                            class="project-link" aria-label="Voir le projet ClashBACC">
+                            Voir le projet <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Portfolio Pro</h3>
+                        <p>
+                            Portfolio personnel avec responsive design adapté à tous les écrans, navigation fluide
+                            et intuitive, et animations modernes réalisées en CSS et JavaScript. Une interface claire
+                            et soignée qui met en valeur compétences et projets.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive</span>
+                        </div>
+                        <a href="https://rogatiana.github.io/Portfolio_2026" target="_blank" rel="noopener noreferrer"
+                            class="project-link" aria-label="Voir le projet Portfolio Pro">
+                            Voir le projet <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Bibliothèque Universitaire</h3>
+                        <p>
+                            Site web de bibliothèque universitaire réalisé en HTML, CSS et JavaScript.
+                            Présentation de la collection de livres, catégories, règles d'utilisation,
+                            horaires d'ouverture et espace contact.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Projet d'équipe</span>
+                        </div>
+                        <a href="https://rogatiana.github.io/DA2II_L1_Groupe_6" target="_blank"
+                            rel="noopener noreferrer" class="project-link"
+                            aria-label="Voir le projet Bibliothèque Universitaire">
+                            Voir le projet <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section reveal">
+            <div class="container">
+                <h2 class="section-title">Travaillons ensemble</h2>
+                <p class="section-subtitle">
+                    Une question, un projet ou une opportunité ? Je vous réponds sous 24h.
+                </p>
+
+                <div class="contact-wrapper">
+                    <aside class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <a href="mailto:riantsoa.rogatiana@outlook.fr">riantsoa.rogatiana@outlook.fr</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Téléphone</h4>
+                                <a href="tel:+261342707791">+261 34 27 077 91</a><br>
+                                <a href="tel:+261351124673">+261 35 11 246 73</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Localisation</h4>
+                                <span>Fianarantsoa, Madagascar</span>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-circle-check"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Disponibilité</h4>
+                                <span class="status-available">
+                                    <span class="pulse-dot"></span> Ouvert aux opportunités
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials">
+                            <a href="https://github.com/rogatiana" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/rogatiana" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://x.com/Rogatiana05" target="_blank" rel="noopener"
+                                aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://facebook.com/Rogatiana" target="_blank" rel="noopener"
+                                aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </aside>
+
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nom complet <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="name" name="name" placeholder="Votre nom" autocomplete="name"
+                                        required minlength="2">
+                                    <span class="form-error" data-error-for="name"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email <span aria-hidden="true">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="votremail@gmail.com"
+                                        autocomplete="email" required>
+                                    <span class="form-error" data-error-for="email"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Sujet <span aria-hidden="true">*</span></label>
+                                <input type="text" id="subject" name="subject"
+                                    placeholder="Ex. : Proposition de stage, Collaboration..." required minlength="3">
+                                <span class="form-error" data-error-for="subject"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span aria-hidden="true">*</span></label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Décrivez votre projet ou votre demande..." required
+                                    minlength="10"></textarea>
+                                <div class="form-meta">
+                                    <span class="form-error" data-error-for="message"></span>
+                                    <span class="char-count"><span id="charCount">0</span>/500</span>
+                                </div>
+                            </div>
+
+                            <div class="form-honeypot" aria-hidden="true">
+                                <label for="website">Site web</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                                <span class="btn-text">Envoyer le message</span>
+                                <i class="fas fa-paper-plane"></i>
+                                <span class="btn-loader" aria-hidden="true"></span>
+                            </button>
+
+                            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="currentYear">2026</span> ROGATIANA — Développeur front-end junior.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
