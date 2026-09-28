@@ -478,17 +478,19 @@
 
         const simulateSend = async () => {
             const formData = new FormData(form);
-            const response = await fetch('https://formspree.io/f/xyezbqrk', {
+
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                body: formData
             });
 
-            if (!response.ok) {
-                throw new Error('Échec de l\'envoi');
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.message || 'Erreur lors de l\'envoi');
             }
+
+            return data;
         };
 
         const handleSubmit = async (e) => {
@@ -519,18 +521,20 @@
             showStatus('', '');
 
             try {
-                await simulateSend();
+                const result = await simulateSend();
                 showStatus(
                     'success',
-                    '<i class="fas fa-check-circle"></i> Message envoyé avec succès ! Je vous répondrai sous 24h.'
+                    '<i class="fas fa-check-circle"></i> ' + (result.message || 'Message envoyé avec succès !')
                 );
                 resetForm();
-            } catch {
+            }
+            catch (err) {
                 showStatus(
                     'error',
-                    '<i class="fas fa-times-circle"></i> Une erreur est survenue. Réessayez plus tard.'
+                    '<i class="fas fa-times-circle"></i> ' + (err.message || 'Une erreur est survenue.')
                 );
-            } finally {
+            }
+            finally {
                 setLoading(false);
             }
         };

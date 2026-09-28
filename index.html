@@ -334,6 +334,9 @@
 
                     <div class="contact-form-wrapper">
                         <form class="contact-form" id="contactForm" novalidate>
+
+                            <input type="hidden" name="access_key" value="8f185148-cfd0-474b-98b3-5d4a732f4334">
+
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name">Nom complet <span aria-hidden="true">*</span></label>
@@ -370,7 +373,8 @@
 
                             <div class="form-honeypot" aria-hidden="true">
                                 <label for="website">Site web</label>
-                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                                <input type="text" id="website" name="botcheck" tabindex="-1" autocomplete="off"
+                                    style="display:none">
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
